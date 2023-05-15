@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../you tube/images/logo.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div class="chatapp">
+            <div class="headder">
+                <div class="hd-wrapp">
+                    <img class="avatar" src="https://med.gov.bz/wp-content/uploads/2020/08/dummy-profile-pic.jpg" alt="">
+                 <h4 class="name">qf musthu</h4>
+                </div>
+                <!-- <button onclick="chooseImage()"
+                style="margin-right: 6px; background: none;" class="main-link"> <i class="fa-light fa-image"></i> </button> -->
+                 <a href="#" class="sign main-link"><i class="ri-logout-box-line"></i></a>
+            </div>
+            <div class="chatsection">
+                
+                  
+                        <div class="single-chat">
+                            <div class="chat-profile">
+                                <img class="avatar" src="https://med.gov.bz/wp-content/uploads/2020/08/dummy-profile-pic.jpg" alt="">
+                            </div>
+                            <div class="chat-wrapper  chat-wrap-two ">
+                                <p>qf musthu</p>
+                                <h4>my current data value</h4>
+                                <small>12 10 22</small>
+                                <div class="side-bar-open"><i class="ri-more-line"></i></div>
+                                <div class="side-bar-close"><i class="ri-close-line"></i></div>
+                            </div>                         
+                            <button class="dtl">delete</button>
+                          
+                            <!-- <div class="imoji">
+                                <img src="./image/pngegg.png" alt="">
+                                <img src="./image/pngegg.png" alt="">
+                                <img src="./image/pngegg.png" alt="">
+                                <img src="./image/pngegg.png" alt="">
+                            </div> -->
+                        </div>
+                  
+             
+            </div>
+            <div id="footer">
+    
+               <div class="bottum">
+                <form id="entermessage">
+                    <input type="text" placeholder=" enter message......" name="message">
+                    <button style="border-radius: 50px;" class="main-link">SEND<i class="ri-arrow-right-line"></i> </button>
+                </form>
+                
+               </div>
+                
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="./app.js" ></script>
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+        import { getFirestore } from "firebase/firestore";
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBvxPH7KIshBxR03Y5BSjMh2O-1VD7ww80",
+          authDomain: "musthu-1.firebaseapp.com",
+          projectId: "musthu-1",
+          storageBucket: "musthu-1.appspot.com",
+          messagingSenderId: "98470708557",
+          appId: "1:98470708557:web:d44fb137169b809b6e6304",
+          measurementId: "G-YB6RWB65VX"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+       
+
+      </script> -->
+
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+        import { getFirestore ,doc, setDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBvxPH7KIshBxR03Y5BSjMh2O-1VD7ww80",
+          authDomain: "musthu-1.firebaseapp.com",
+          projectId: "musthu-1",
+          storageBucket: "musthu-1.appspot.com",
+          messagingSenderId: "98470708557",
+          appId: "1:98470708557:web:d44fb137169b809b6e6304",
+          measurementId: "G-YB6RWB65VX"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        // Initialize Cloud Firestore and get a reference to the service
+         const db = getFirestore(app);
+        
+        const userImage = "https://med.gov.bz/wp-content/uploads/2020/08/dummy-profile-pic.jpg"
+        
+        var form = document.querySelector('#entermessage')
+        
+        form.addEventListener('submit',function(e){
+            e.preventDefault();
+            let message_value = form.message.value;
+            form.message.value = ''
+            let date = new Date();
+            // let date_vaalue = date.getHours() + ':' + date.getMinutes() + " | " + date.getSeconds() + '|' + date.getDate() + "|" + date.getMonth() + date.getFullYear()
+            let date_value = `${ date.getHours()} : ${date.getMinutes()} | ${date.getSeconds()} | ${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
+             // Add a second document with a generated ID.
+                                                            
+            //  import { doc, setDoc } from "firebase/firestore"; 
+        
+              // Add a new document in collection "cities
+
+          setDoc(doc(db, "chats",), {
+                message: message_value,
+                user_name: "muhmmed musthafa",
+                user_image: userImage,
+                date : date_value
+              })
+              .then(() => {
+                 console.log("Document successfully written!");
+             })
+             .catch((error) => {
+                 console.error("Error writing document: ", error);
+             });
+         })
+      </script> -->
